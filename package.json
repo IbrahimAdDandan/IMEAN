@@ -1,0 +1,40 @@
+{
+  "name": "imean",
+  "version": "1.0.0",
+  "description": "MEAN full stack CMS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IbrahimAdDandan/IMEAN.git"
+  },
+  "keywords": [
+    "CMS",
+    "MEAN",
+    "full",
+    "satck",
+    "mongo",
+    "mongoose",
+    "express",
+    "angularjs",
+    "nodejs",
+    "Ibrahim",
+    "AdDandan",
+    "ابراهيم",
+    "الدندن"
+  ],
+  "author": "Ibrahim AdDandan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IbrahimAdDandan/IMEAN/issues"
+  },
+  "homepage": "https://github.com/IbrahimAdDandan/IMEAN#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.1"
+  }
+}

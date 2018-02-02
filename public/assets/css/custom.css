@@ -1,0 +1,12 @@
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+  }
+
+.navbar {
+  box-shadow: 3px 2px 5px #b1c7df;
+}
+  
+.navbar-brand {
+  color: #49709e !important;
+}
