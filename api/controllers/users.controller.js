@@ -5,8 +5,12 @@ var jwt = require('jsonwebtoken');
 
 module.exports.login = function (req, res) {
     console.log('logging in user');
-    var username = req.body.username;
-    var password = req.body.password;
+    var username = req.body.username || '';
+    var password = req.body.password || '';
+    console.log(req.body);
+    console.log('USERNAME:' + username);
+    console.log('password: ' + password);
+    
     User
         .findOne({
             username: username
