@@ -1,1 +1,23 @@
-<h1>admin area</h1>
+<!DOCTYPE html>
+<html lang="en" ng-app="admin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Area</title>
+</head>
+<body>
+    <a href="admin.html#!/profile">profile</a> <br>
+    
+    <h1>Admin Area</h1>
+    <div ng-view></div>
+</body>
+    <script src="assets/js/jquery-slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="admin/admin.js"></script>
+    <script src="admin/profile/profile.controller.js"></script>
+    <script src="admin/auth/authFactory.js"></script>
+    <script src="admin/auth/authInterceptor.js"></script>
+</html>

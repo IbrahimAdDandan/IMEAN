@@ -22,7 +22,7 @@ module.exports.login = function (req, res) {
                     .status(400)
                     .json(err);
             } else {
-                if (bcrypt.compareSync(password, user.password)) {
+                if (user && bcrypt.compareSync(password, user.password)) {
                     console.log('user found ' + user);
                     var token = jwt.sign({ username: user.username }, 'secretKey', { expiresIn: 3600 });
                     res
