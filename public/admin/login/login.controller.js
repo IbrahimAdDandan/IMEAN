@@ -1,6 +1,6 @@
 angular.module('admin').controller('LoginController', LoginController);
 
-function LoginController($http, $window, AuthFactory) {
+function LoginController($http, $window, $location, AuthFactory, jwtHelper) {
     var vm = this;
 
     vm.message = 'Please login to get the admin\'s dashboard.';
@@ -25,7 +25,13 @@ function LoginController($http, $window, AuthFactory) {
                         $window.alert('welcome ' + vm.username);
                         $window.sessionStorage.token = response.data.token;
                         AuthFactory.isLoggedIn = true;
-                        $window.location.href = 'admin.html';
+                        var token = $window.sessionStorage.token;
+                        var decodedToken = jwtHelper.decodeToken(token);
+                        var username = decodedToken.username;
+                        $window.sessionStorage.setItem('username', username);
+                        $window.sessionStorage.setItem('userType', 'admin');
+                        //$window.location.href = 'admin.html';
+                        $location.path('/admin');
                     } else {
                         $window.alert('something went wrong! please try again later.');
                     }

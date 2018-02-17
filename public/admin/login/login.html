@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/favicon.png" alt="" width="40" /> IMEAN
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Visit the Site
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0" ng-submit="vm.login()">
+            <input class="form-control mr-sm-2" type="text" placeholder="username" ng-model="vm.username">
+            <input class="form-control mr-sm-2" type="password" placeholder="password" ng-model="vm.password">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        </form>
+    </div>
+</nav>
+
+<main role="main" class="container">
+    <div class="jumbotron">
+        <h1>Welcom to IMEAN</h1>
+        <p class="lead">A mini MEAN full stack CMS (Content Management System).
+            <br> Ibrahim AdDAndan</p>
+        <br>
+        <i class="btn btn-lg btn-primary">
+            {{ vm.message }}
+        </i>
+    </div>
+</main>

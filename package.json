@@ -33,6 +33,7 @@
   "homepage": "https://github.com/IbrahimAdDandan/IMEAN#readme",
   "dependencies": {
     "angular": "^1.6.8",
+    "angular-jwt": "^0.1.9",
     "angular-route": "^1.6.8",
     "bcrypt-nodejs": "0.0.3",
     "express": "^4.16.2",

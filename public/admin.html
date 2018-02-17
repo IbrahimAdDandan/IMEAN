@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="assets/img/favicon.ico">
     <title>Admin Area</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 <body>
-    <a href="admin.html#!/profile">profile</a> <br>
     
-    <h1>Admin Area</h1>
     <div ng-view></div>
 </body>
     <script src="assets/js/jquery-slim.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
     <script src="admin/admin.js"></script>
+    <script src="admin/login/login.controller.js"></script>
+    <script src="admin/adminNavbar/adminNavbar.js"></script>
+    <script src="admin/adminArea/adminArea.controller.js"></script>
     <script src="admin/profile/profile.controller.js"></script>
     <script src="admin/auth/authFactory.js"></script>
     <script src="admin/auth/authInterceptor.js"></script>
