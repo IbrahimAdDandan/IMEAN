@@ -1,0 +1,28 @@
+<admin-navbar></admin-navbar>
+<br>
+<div class="container">
+    <h1 class="lead">Ctegory: {{vm.page.title}}</h1>
+    <hr>
+    <a ng-href="admin.html#!/{{vm.page._id}}/createChild" style="float:right">Add new page</a>
+    <table class="table border">
+        <thead>
+            <th>page title</th>
+            <th>created on</th>
+            <th>order</th>
+            <th>actions</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="child in vm.page.childs">
+                <td>
+                    <a ng-href="admin.html#!/page/{{vm.page._id}}/child/{{child._id}}">{{ child.title }}</a>
+                </td>
+                <td>{{ child.createdOn | date}}</td>
+                <td>{{ child.order }}</td>
+                <td>
+                    <i class="btn" ng-click="vm.deleteChild(child._id)">delete</i>
+                    <a ng-href="admin.html#!/page/{{vm.page._id}}/child/{{child._id}}">edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

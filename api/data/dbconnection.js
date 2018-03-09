@@ -13,3 +13,4 @@ mongoose.connection.on('error', function (err) {
 });
 
 require('./users.model');
+require('./pages.model');

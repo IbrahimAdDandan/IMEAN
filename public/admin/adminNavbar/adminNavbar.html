@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light" ng-controller="NavbarController as nb">
     <a class="navbar-brand" href="#">
         <img src="assets/img/favicon.png" alt="" width="40" /> IMEAN
     </a>
@@ -14,8 +14,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    pages
+                <a class="nav-link" href="admin.html#!/pages">
+                    categories
                 </a>
             </li>
             <li class="nav-item pull-right">
@@ -25,8 +25,8 @@
             </li>
         </ul>
         <div class="nav-item pull-right">
-            welcome {{ vm.username }}
-            <button ng-click="vm.logout()">logout</button>
+            welcome {{ nb.username }}
+            <button class="btn btn-outline-success my-2 my-sm-0" ng-click="nb.logout()">logout</button>
         </div>
 
     </div>

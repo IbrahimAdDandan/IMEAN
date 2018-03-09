@@ -29,8 +29,56 @@ function config($httpProvider, $routeProvider) {
                 restricted: true
             }
         })
+        .when('/createCategory', {
+            templateUrl: 'admin/createCategory/createCategory.html',
+            controller: CreateCategory,
+            controllerAs: 'vm',
+            access: {
+                restricted: true
+            }
+        })
+        .when('/pages', {
+            templateUrl: 'admin/pages/pages.html',
+            controller: PagesController,
+            controllerAs: 'vm',
+            access: {
+                restricted: true
+            }
+        })
+        .when('/page/:pageId', {
+            templateUrl: 'admin/page/page.html',
+            controller: PageController,
+            controllerAs: 'vm',
+            access: {
+                restricted: true
+            }
+        })
+        .when('/editPage/:pageId', {
+            templateUrl: 'admin/editCategory/editCategory.html',
+            controller: EditCategory,
+            controllerAs: 'vm',
+            access: {
+                restricted: true
+            }
+        })
+        .when('/:pageId/createChild', {
+            templateUrl: 'admin/createChild/createChild.html',
+            controller: CreateChild,
+            controllerAs: 'vm',
+            access: {
+                restricted: true
+            }
+        })
+        .when('/page/:pageId/child/:childId', {
+            templateUrl: 'admin/editChild/editChild.html',
+            controller: EditChild,
+            controllerAs: 'vm',
+            access: {
+                restricted: true
+            }
+        })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: '/admin'
         });
 }
 

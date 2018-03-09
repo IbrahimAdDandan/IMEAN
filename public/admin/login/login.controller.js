@@ -22,7 +22,7 @@ function LoginController($http, $window, $location, AuthFactory, jwtHelper) {
                 .then(function (response) {
                     console.log(response);
                     if (response.data.success) {
-                        $window.alert('welcome ' + vm.username);
+                        //$window.alert('welcome ' + vm.username);
                         $window.sessionStorage.token = response.data.token;
                         AuthFactory.isLoggedIn = true;
                         var token = $window.sessionStorage.token;
