@@ -1,6 +1,6 @@
 {
   "name": "imean",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "MEAN full stack CMS",
   "main": "app.js",
   "scripts": {
